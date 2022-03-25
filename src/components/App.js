@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Login from './Login';
 import MovieList from './movies/MovieList';
 import ShowMovie from './movies/ShowMovie';
-import ShowMovie from './movies/MyMovieList';
+import MyMovieList from './movies/MyMovieList';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div>
         <Routes>
           <Route exact path="/" element={<Login/>} />
